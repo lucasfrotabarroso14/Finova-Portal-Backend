@@ -1,3 +1,4 @@
+from flask_cors import CORS
 from flask_restful import Api
 from flask import Flask
 from flask_jwt_extended import JWTManager
@@ -32,7 +33,7 @@ api.add_resource(UsersPortfoliosDetails,"/users/portfolio/<int:id>")
 api.add_resource(LoginList, "/login")
 
 
-
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 app.config.from_object('config')
 
