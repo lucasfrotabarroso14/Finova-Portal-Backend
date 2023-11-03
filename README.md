@@ -35,6 +35,7 @@ O Finova Portal Backend é uma API RESTful que oferece serviços para criar, ler
 Essa abordagem me permitiu criar um backend eficiente, escalável e de fácil manutenção para suportar o aplicativo Finova.
 
 ## Documentação da API
+![swagger](https://i.imgur.com/GyUE9yZ.png)
 Você pode encontrar a documentação da API em [link-para-documentacao](#), com informações detalhadas sobre os endpoints disponíveis e como usá-los.
 
 ## Link para o Frontend
