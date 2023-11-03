@@ -3,7 +3,7 @@ from utils.global_methods import generate_secret_key
 DEBUG=True
 
 USERNAME = 'root'
-PASSWORD = 'usha8tkgc'
+PASSWORD = 'senha'
 SERVER = 'localhost'
 DB = 'investment'
 
