@@ -6,9 +6,15 @@
 O Finova Portal Backend é uma API RESTful que oferece serviços para criar, ler, atualizar e excluir ativos, portfólios de investimentos e usuários. Esta API serve como o backend para o [Finova Portal Frontend](https://github.com/lucasfrotabarroso14/Finova-Portal-Front), que é a interface do usuário para o sistema.
 
 ## Tecnologias Utilizadas
-- Python
-- Flask(Framework)
-- MySQL(Banco de dados)
+- Linguagem de Programação: Python
+- Framework Web: Flask
+- Banco de Dados: MySQL
+- Autenticação: JWT (JSON Web Tokens)
+- CORS: Habilitado para todas as origens
+- Serviço de Email: SMTP com Gmail para enviar e-mails de confirmação de registro
+- Criptografia de Senha: Utiliza pbkdf2_sha256 para hash de senhas
+- Geração de Chave Secreta: Utiliza a biblioteca secrets para gerar chaves secretas
+- Integração Financeira: Utiliza a biblioteca yfinance para obter informações em tempo real de ativos financeiros
 
 
 ## Funcionalidades Principais
