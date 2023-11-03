@@ -32,7 +32,7 @@ O Finova Portal Backend é uma API RESTful que oferece serviços para criar, ler
 
 **Programação Funcional:**
 
-- **Funções Puras:** Meus métodos de classe são funções puras, retornando valores com base em argumentos e sem efeitos colaterais.
+- **Funções Puras:** Os métodos de classe são funções puras, retornando valores com base em argumentos e sem efeitos colaterais.
 
 - **Imutabilidade:** Respeitei a imutabilidade, retornando novos valores em vez de modificar o estado dos objetos.
 
