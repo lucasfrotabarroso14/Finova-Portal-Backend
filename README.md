@@ -16,7 +16,6 @@ O Finova Portal Backend é uma API RESTful que oferece serviços para criar, ler
 - Geração de Chave Secreta: Utiliza a biblioteca secrets para gerar chaves secretas
 - Integração Financeira: Utiliza a biblioteca yfinance para obter informações em tempo real de ativos financeiros
 
-
 ## Funcionalidades Principais
 - Registro e gerenciamento de ativos
 - Registro e gerenciamento de portfólios de investimentos
@@ -39,6 +38,11 @@ O Finova Portal Backend é uma API RESTful que oferece serviços para criar, ler
 - **Reuso de Funções:** Reutilizei funções em vários contextos para evitar duplicação de código.
 
 Essa abordagem me permitiu criar um backend eficiente, escalável e de fácil manutenção para suportar o aplicativo Finova.
+
+## Arquitetura do Projeto
+Abaixo está o diagrama de arquitetura do Finova Portal Backend, mostrando a estrutura geral e a interação entre os componentes do sistema.
+
+![Arquitetura do Finova Portal Backend](https://i.imgur.com/oaEewLu.png)
 
 ## Documentação da API
 ![swagger](https://i.imgur.com/GyUE9yZ.png)
