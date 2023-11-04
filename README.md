@@ -3,7 +3,7 @@
 ![Logo do Finova](https://i.imgur.com/RELNipx.png)
 
 ## Descrição
-O Finova Portal Backend é uma API RESTful que oferece serviços para criar, ler, atualizar e excluir ativos, portfólios de investimentos e usuários. Esta API serve como o backend para o [Finova Portal Frontend](https://github.com/lucasfrotabarroso14/Finova-Portal-Front), que é a interface do usuário para o sistema.
+O Finova Portal Backend é um dos meus projetos pessoais que é uma API RESTful que oferece serviços para criar, ler, atualizar e excluir ativos, portfólios de investimentos e usuários. Esta API serve como o backend para o [Finova Portal Frontend](https://github.com/lucasfrotabarroso14/Finova-Portal-Front), que é a interface do usuário para o sistema.
 
 ## Tecnologias Utilizadas
 - Linguagem de Programação: Python
