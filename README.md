@@ -46,7 +46,6 @@ Abaixo está o diagrama de arquitetura do Finova Portal Backend, mostrando a est
 
 ## Documentação da API
 ![swagger](https://i.imgur.com/GyUE9yZ.png)
-Você pode encontrar a documentação da API em [link-para-documentacao](#), com informações detalhadas sobre os endpoints disponíveis e como usá-los.
 
 ## Link para o Frontend
 O frontend associado a esta API pode ser encontrado em [Finova Portal Frontend](https://github.com/lucasfrotabarroso14/Finova-Portal-Front). Certifique-se de verificar também o frontend para uma experiência completa do sistema.
