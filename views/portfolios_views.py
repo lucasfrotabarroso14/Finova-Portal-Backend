@@ -1,8 +1,9 @@
-from flask_restful import Resource
+from flask_restx import Resource,Namespace
 from services import ativos_service, portfolios_service
 from flask import request
 
-
+portfolios_swagger = Namespace('portfolios', description='Endpoints para portfolios')
+@portfolios_swagger.route('/')
 class PortfoliosList(Resource):
     def get(self):
         data, status = portfolios_service.get_all()
@@ -37,7 +38,7 @@ class PortfoliosList(Resource):
             "message":"Sucesso na requisição",
             "result": result
         }
-
+@portfolios_swagger.route('/<int:id>')
 class PortfoliosDetails(Resource):
 
     def get(self, id):

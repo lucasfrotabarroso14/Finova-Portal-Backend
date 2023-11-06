@@ -1,5 +1,5 @@
 from datetime import timedelta
-from flask_restful import Resource
+from flask_restx import Resource,Namespace
 from flask import request, jsonify, make_response
 import requests
 from flask_jwt_extended import create_access_token
@@ -7,7 +7,8 @@ from utils.global_methods import decrypt_password
 
 from services.user_service import get_by_email
 
-
+login_swagger = Namespace('login', description='Endpoints de login')
+@login_swagger.route('/')
 class LoginList(Resource):
     def post(self):
         data = request.get_json()

@@ -1,7 +1,8 @@
-from flask_restful import Resource
+from flask_restx import Resource,Namespace
 from services import ativos_service
 from flask import request
-
+ativos_swagger = Namespace('ativos', description='Endpoints para ativos')
+@ativos_swagger.route('/')
 class AtivosList(Resource):
     def get(self):
         data = ativos_service.get_all()
@@ -31,7 +32,7 @@ class AtivosList(Resource):
         response = ativos_service.registrar_ativo(ativo_obj)
         return response
 
-
+@ativos_swagger.route('/<int:id>')
 class AtivosDetails(Resource):
 
     def get(self,id):

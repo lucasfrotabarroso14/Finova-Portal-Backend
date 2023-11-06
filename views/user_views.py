@@ -1,10 +1,13 @@
-from flask_restful import Resource
+from flask_restx import Resource, Namespace
+
+
 from services import user_service
 from flask import request,make_response,jsonify
 import json
 from utils.global_methods import encrypt_password, serialize_date
 
-
+users_swagger = Namespace('users', description='Endpoints de user')
+@users_swagger.route('/')
 class UserList(Resource):
     def get(self):
         data = user_service.get_all()
@@ -39,7 +42,7 @@ class UserList(Resource):
         response = user_service.register_user(user_obj)
         return response
 
-
+@users_swagger.route('/<int:id>')
 class UserDetails(Resource):
     def get(id):
         data, status = user_service.get_by_id(id)
@@ -69,7 +72,7 @@ class UserDetails(Resource):
                 "message": "Falha na requisição",
                 "result": data
             }
-
+@users_swagger.route('/portfolio/<int:id>')
 class UsersPortfoliosDetails(Resource):
     def get(self,id):
         data, status = user_service.get_users_portfolios(id)
@@ -86,7 +89,6 @@ class UsersPortfoliosDetails(Resource):
                 "message": "Falha na requisição",
                 "result": data
             }
-
 
 
     # def put(self, id):
