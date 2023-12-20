@@ -46,7 +46,7 @@ def adicionar_portfolio(obj):
     Stock = Ativo(obj["symbol"])
     current_price = Stock.get_current_price()
     obj["custo_unitario"] = current_price
-    obj["custo_total"] = obj["custo_unitario"] * obj["quantidade"]
+    obj["custo_total"] = float(obj["custo_unitario"]) * float(obj["quantidade"])
 
     obj["data_aquisicao"]= datetime.today()
     params = (
