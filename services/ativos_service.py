@@ -1,4 +1,5 @@
 from utils.global_methods import execute_query
+from utils.responses import DefaultResponse
 
 
 def get_all():
@@ -25,11 +26,15 @@ def registrar_ativo(ativo_obj):
     """
     result, status = execute_query(query, {})
 
+
     if not status:
-        return {
-                   "status": False,
-                   "result": result
-               }, 500
+        response = DefaultResponse(status_code=500, status=False, message="Erro",
+                                   result=result)
+        return response.to_json()
+    #     return {
+    #                "status": False,
+    #                "result": result
+    #            }, 500
 
     query ="""
     INSERT INTO 
@@ -47,12 +52,18 @@ def registrar_ativo(ativo_obj):
     result, status = execute_query(query, params)
 
     if status:
-        return {
-            status : True,
-            "message": "Criado com sucesso"
-        }, 200
+        response = DefaultResponse(status_code=200, status=True, message="Criado com sucesso",
+                                   result=result)
+        return response.to_json()
+        # return {
+        #     status : True,
+        #     "message": "Criado com sucesso"
+        # }, 200
     else:
-        return status, 404
+        response = DefaultResponse(status_code=404, status=False, message="Erro",
+                                   result=result)
+        return response.to_json()
+        # return status, 404
 
 
 def get_by_id(id):
